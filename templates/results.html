@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - LTIMindtree Protein Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="glow-text">Protein Design Results</h1>
+            <p class="lead">Visualize and analyze your designed proteins</p>
+            <div class="tech-circle tech-circle-1"></div>
+            <div class="tech-circle tech-circle-2"></div>
+            <div class="tech-line tech-line-1"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Job Information Section -->
+        <div class="row mb-4">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">
+                            <i class="bi bi-info-circle me-2"></i>Job Information
+                        </h5>
+                        <span class="badge bg-success">Completed</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="mb-3">Job Parameters</h6>
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <th>Job ID</th>
+                                            <td><code>{{ job_id }}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Protein Length Range</th>
+                                            <td>{{ params.min_length }} - {{ params.max_length }} amino acids</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Number of Samples</th>
+                                            <td>{{ params.num_samples }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Batch Size</th>
+                                            <td>{{ params.batch_size }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="mb-3">Model Parameters</h6>
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <th>MPNN Sequences per Backbone</th>
+                                            <td>{{ params.mpnn_num_sequences }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>MPNN Temperature</th>
+                                            <td>{{ params.mpnn_temperature }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Device</th>
+                                            <td>{{ params.device }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>GPUs for OmegaFold</th>
+                                            <td>{{ params.gpus|join(', ') }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Results Layout -->
+        <div class="row mb-4">
+            <div class="col-lg-12">
+                <h4 class="text-center mb-4 glow-text">Protein Design Results</h4>
+
+                <!-- Three-column layout for results -->
+                <div class="row horizontal-results-container">
+                    <!-- Backbone Structures Column -->
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-bounding-box me-2"></i>Backbone Structures
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                {% if backbone_files %}
+                                    <div class="row">
+                                        {% for file in backbone_files %}
+                                        <div class="col-12 mb-4">
+                                            <div class="card h-100">
+                                                <div class="card-header d-flex justify-content-between align-items-center py-2">
+                                                    <h6 class="mb-0">{{ file.split('.')[0] }}</h6>
+                                                    <span class="badge bg-info">Backbone</span>
+                                                </div>
+                                                <img src="/download/{{ job_id }}/visualizations/backbones/{{ file.replace('.pdb', '.png') }}" class="card-img-top" alt="{{ file }}" onerror="this.src='/static/img/backbone_placeholder.png'">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="btn-group">
+                                                            <a href="/download/{{ job_id }}/visualizations/backbones/{{ file.replace('.pdb', '.png') }}" class="btn btn-sm btn-outline-primary" download>
+                                                                <i class="bi bi-download me-1"></i>Image
+                                                            </a>
+                                                            <a href="/download/{{ job_id }}/backbone_sampling/sampled_pdb/{{ file }}" class="btn btn-sm btn-outline-secondary" download>
+                                                                <i class="bi bi-file-earmark-code me-1"></i>PDB
+                                                            </a>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-outline-success view-protein" data-pdb-url="/download/{{ job_id }}/backbone_sampling/sampled_pdb/{{ file }}">
+                                                            <i class="bi bi-eye me-1"></i>View 3D
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-warning">
+                                        <i class="bi bi-exclamation-triangle-fill me-2"></i>No backbone files found.
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sequence Analysis Column -->
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-code-slash me-2"></i>Sequence Analysis
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="data-visualization mb-4">
+                                    <h6 class="mb-3">Amino Acid Distribution</h6>
+                                    <div class="sequence-stats-placeholder bg-light p-3 rounded text-center">
+                                        <p class="mb-0">Amino acid distribution visualization would appear here in a full implementation.</p>
+                                    </div>
+                                </div>
+
+                                <h6 class="mb-3">Sample Sequences</h6>
+                                <div class="accordion" id="sequenceAccordion">
+                                    {% if vis_files %}
+                                        {% for file in vis_files[:3] %}
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="heading{{ loop.index }}">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                                                    Sequence {{ loop.index }}: {{ file.split('.')[0] }}
+                                                </button>
+                                            </h2>
+                                            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#sequenceAccordion">
+                                                <div class="accordion-body">
+                                                    <div class="sequence-display" data-sequence="MKTVRQERLKSIVRILERSKEPVSGAQLAEELSVSRQVIVQDIAYLRSLGYNIVATPRGYVLAGG">
+                                                        <!-- Sequence will be populated by JavaScript -->
+                                                        <div class="text-center">
+                                                            <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            <span class="ms-2">Loading sequence...</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end mt-3">
+                                                        <a href="/download/{{ job_id }}/mpnn_sequences/{{ file.replace('.png', '.fasta') }}" class="btn btn-sm btn-outline-primary" download>
+                                                            <i class="bi bi-download me-1"></i>Download FASTA
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    {% else %}
+                                        <div class="alert alert-warning">
+                                            <i class="bi bi-exclamation-triangle-fill me-2"></i>No sequence files found.
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Protein Structures Column -->
+                    <div class="col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-box me-2"></i>Final Protein Structures
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                {% if vis_files %}
+                                    <div class="row">
+                                        {% for file in vis_files %}
+                                        <div class="col-12 mb-4">
+                                            <div class="card h-100">
+                                                <div class="card-header d-flex justify-content-between align-items-center py-2">
+                                                    <h6 class="mb-0">{{ file.split('.')[0] }}</h6>
+                                                    <span class="badge bg-primary">Final Structure</span>
+                                                </div>
+                                                <img src="/download/{{ job_id }}/visualizations/{{ file }}" class="card-img-top" alt="{{ file }}">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="btn-group">
+                                                            <a href="/download/{{ job_id }}/visualizations/{{ file }}" class="btn btn-sm btn-outline-primary" download>
+                                                                <i class="bi bi-download me-1"></i>Image
+                                                            </a>
+                                                            <a href="/download/{{ job_id }}/omegafold_predictions/{{ file.replace('.png', '.pdb') }}" class="btn btn-sm btn-outline-secondary" download>
+                                                                <i class="bi bi-file-earmark-code me-1"></i>PDB
+                                                            </a>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-outline-success view-protein" data-pdb-url="/download/{{ job_id }}/omegafold_predictions/{{ file.replace('.png', '.pdb') }}">
+                                                            <i class="bi bi-eye me-1"></i>View 3D
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-warning">
+                                        <i class="bi bi-exclamation-triangle-fill me-2"></i>No visualization files found.
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Viewer Modal -->
+        <div class="modal fade" id="proteinViewerModal" tabindex="-1" aria-labelledby="proteinViewerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="proteinViewerModalLabel">Protein Structure Viewer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="protein-viewer" id="modalProteinViewer"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="#" id="downloadPdbBtn" class="btn btn-primary" download>Download PDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="row mb-5">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-download me-2"></i>Download Results
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <div class="d-grid">
+                                    <a href="/download/{{ job_id }}/backbone_sampling/sampled_pdb" class="btn btn-outline-primary">
+                                        <i class="bi bi-bounding-box me-2"></i>Backbones (PDB)
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="d-grid">
+                                    <a href="/download/{{ job_id }}/mpnn_sequences" class="btn btn-outline-primary">
+                                        <i class="bi bi-code-slash me-2"></i>Sequences (FASTA)
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="d-grid">
+                                    <a href="/download/{{ job_id }}/omegafold_predictions" class="btn btn-outline-primary">
+                                        <i class="bi bi-box me-2"></i>Structures (PDB)
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="d-grid">
+                                    <a href="/download/{{ job_id }}/visualizations" class="btn btn-outline-primary">
+                                        <i class="bi bi-eye me-2"></i>Visualizations (PNG)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="row mb-5">
+            <div class="col-lg-10 offset-lg-1 d-flex justify-content-between">
+                <a href="/" class="btn btn-outline-primary">
+                    <i class="bi bi-house-door me-2"></i>Back to Home
+                </a>
+                <a href="/" class="btn btn-primary">
+                    <i class="bi bi-plus-circle me-2"></i>Start New Job
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LTIMindtree Protein Design</h5>
+                    <p>An integrated platform for computational protein design using state-of-the-art deep learning models.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/wukevin/foldingdiff" target="_blank">FoldingDiff GitHub</a></li>
+                        <li><a href="https://github.com/dauparas/ProteinMPNN" target="_blank">ProteinMPNN GitHub</a></li>
+                        <li><a href="https://github.com/HeliXonProtein/OmegaFold" target="_blank">OmegaFold GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>References</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://arxiv.org/abs/2209.15611" target="_blank">FoldingDiff Paper</a></li>
+                        <li><a href="https://www.biorxiv.org/content/10.1101/2022.06.03.494563v1" target="_blank">ProteinMPNN Paper</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/protein-viewer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize protein viewer modal
+            const proteinViewerModal = new bootstrap.Modal(document.getElementById('proteinViewerModal'));
+            const modalViewer = document.getElementById('modalProteinViewer');
+            const downloadPdbBtn = document.getElementById('downloadPdbBtn');
+
+            // Add event listeners to view protein buttons
+            document.querySelectorAll('.view-protein').forEach(button => {
+                button.addEventListener('click', function() {
+                    const pdbUrl = this.getAttribute('data-pdb-url');
+                    modalViewer.setAttribute('data-pdb-url', pdbUrl);
+                    downloadPdbBtn.setAttribute('href', pdbUrl);
+
+                    // Update modal title with protein name
+                    const proteinName = this.closest('.card').querySelector('.card-header h6').textContent;
+                    document.getElementById('proteinViewerModalLabel').textContent = `Protein Structure: ${proteinName}`;
+
+                    // Initialize the protein viewer
+                    initProteinVisualization();
+
+                    // Show the modal
+                    proteinViewerModal.show();
+                });
+            });
+
+            // Initialize sequence displays
+            initSequenceViewer();
+        });
+    </script>
+</body>
+</html>

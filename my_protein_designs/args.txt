@@ -1,0 +1,1 @@
+Namespace(batchsize=512, device='cuda:0', end_at_step=4, fullhistory=False, gpus=None, max_length=55, min_length=50, model='wukevin/foldingdiff_cath', mpnn_num_sequences=3, mpnn_temperature=0.1, num=3, omegafold_env='omegafold', omegafold_path='/home/musa/anaconda3/envs/omegafold', outdir='./my_protein_designs', seed=42, skip_visualization=False, start_from_step=1)

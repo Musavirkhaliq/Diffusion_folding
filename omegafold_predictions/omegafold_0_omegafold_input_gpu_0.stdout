@@ -1,0 +1,4 @@
+INFO:root:Loading weights from /home/musa/.cache/omegafold_ckpt/model.pt
+INFO:root:Constructing OmegaFold
+INFO:root:Reading /home/musa/Documents/augment-projects/foldingdiff/omegafold_predictions/0_omegafold_input.fasta
+INFO:root:Done!

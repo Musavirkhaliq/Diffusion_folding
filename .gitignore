@@ -3,6 +3,8 @@
 *.pkl
 data/cath/*
 data/alphafold/*.pdb.gz
+./data/cath/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

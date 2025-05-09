@@ -1,0 +1,304 @@
+INFO:root:Loading weights from /home/musa/.cache/omegafold_ckpt/model.pt
+INFO:root:Constructing OmegaFold
+INFO:root:Reading finalstructure/0_omegafold_input.fasta
+INFO:root:Predicting 1th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.96 seconds.
+INFO:root:Saving prediction to finalstructure/generated_1_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 2th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.18 seconds.
+INFO:root:Saving prediction to finalstructure/generated_1_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 3th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.19 seconds.
+INFO:root:Saving prediction to finalstructure/generated_2_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 4th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.19 seconds.
+INFO:root:Saving prediction to finalstructure/generated_1_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 5th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.20 seconds.
+INFO:root:Saving prediction to finalstructure/generated_0_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 6th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.21 seconds.
+INFO:root:Saving prediction to finalstructure/generated_0_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 7th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.21 seconds.
+INFO:root:Saving prediction to finalstructure/generated_2_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 8th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.22 seconds.
+INFO:root:Saving prediction to finalstructure/generated_0_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 9th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.22 seconds.
+INFO:root:Saving prediction to finalstructure/generated_2_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 10th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.24 seconds.
+INFO:root:Saving prediction to finalstructure/generated_1_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 11th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.25 seconds.
+INFO:root:Saving prediction to finalstructure/generated_2_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 12th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:50 residues in this chain.
+INFO:root:Finished prediction in 4.25 seconds.
+INFO:root:Saving prediction to finalstructure/generated_0_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 13th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 4.31 seconds.
+INFO:root:Saving prediction to finalstructure/generated_4_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 14th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 4.33 seconds.
+INFO:root:Saving prediction to finalstructure/generated_4_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 15th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 4.33 seconds.
+INFO:root:Saving prediction to finalstructure/generated_4_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 16th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 4.33 seconds.
+INFO:root:Saving prediction to finalstructure/generated_5_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 17th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 4.34 seconds.
+INFO:root:Saving prediction to finalstructure/generated_3_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 18th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 5.77 seconds.
+INFO:root:Saving prediction to finalstructure/generated_3_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 19th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.86 seconds.
+INFO:root:Saving prediction to finalstructure/generated_5_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 20th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.87 seconds.
+INFO:root:Saving prediction to finalstructure/generated_4_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 21th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.88 seconds.
+INFO:root:Saving prediction to finalstructure/generated_3_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 22th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.90 seconds.
+INFO:root:Saving prediction to finalstructure/generated_3_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 23th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.92 seconds.
+INFO:root:Saving prediction to finalstructure/generated_5_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 24th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:51 residues in this chain.
+INFO:root:Finished prediction in 6.94 seconds.
+INFO:root:Saving prediction to finalstructure/generated_5_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 25th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.64 seconds.
+INFO:root:Saving prediction to finalstructure/generated_8_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 26th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.65 seconds.
+INFO:root:Saving prediction to finalstructure/generated_6_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 27th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.68 seconds.
+INFO:root:Saving prediction to finalstructure/generated_7_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 28th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.69 seconds.
+INFO:root:Saving prediction to finalstructure/generated_7_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 29th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_7_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 30th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.77 seconds.
+INFO:root:Saving prediction to finalstructure/generated_6_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 31th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.78 seconds.
+INFO:root:Saving prediction to finalstructure/generated_6_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 32th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.83 seconds.
+INFO:root:Saving prediction to finalstructure/generated_6_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 33th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.83 seconds.
+INFO:root:Saving prediction to finalstructure/generated_8_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 34th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.85 seconds.
+INFO:root:Saving prediction to finalstructure/generated_8_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 35th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.89 seconds.
+INFO:root:Saving prediction to finalstructure/generated_8_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 36th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:52 residues in this chain.
+INFO:root:Finished prediction in 6.88 seconds.
+INFO:root:Saving prediction to finalstructure/generated_7_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 37th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.67 seconds.
+INFO:root:Saving prediction to finalstructure/generated_11_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 38th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.67 seconds.
+INFO:root:Saving prediction to finalstructure/generated_11_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 39th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.71 seconds.
+INFO:root:Saving prediction to finalstructure/generated_10_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 40th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.71 seconds.
+INFO:root:Saving prediction to finalstructure/generated_9_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 41th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_9_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 42th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_11_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 43th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.72 seconds.
+INFO:root:Saving prediction to finalstructure/generated_11_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 44th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_9_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 45th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_10_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 46th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.76 seconds.
+INFO:root:Saving prediction to finalstructure/generated_10_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 47th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.74 seconds.
+INFO:root:Saving prediction to finalstructure/generated_10_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 48th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:53 residues in this chain.
+INFO:root:Finished prediction in 7.76 seconds.
+INFO:root:Saving prediction to finalstructure/generated_9_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 49th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 7.96 seconds.
+INFO:root:Saving prediction to finalstructure/generated_14_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 50th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 7.97 seconds.
+INFO:root:Saving prediction to finalstructure/generated_12_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 51th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 7.99 seconds.
+INFO:root:Saving prediction to finalstructure/generated_13_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 52th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.00 seconds.
+INFO:root:Saving prediction to finalstructure/generated_14_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 53th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 7.98 seconds.
+INFO:root:Saving prediction to finalstructure/generated_13_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 54th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.01 seconds.
+INFO:root:Saving prediction to finalstructure/generated_12_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 55th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.02 seconds.
+INFO:root:Saving prediction to finalstructure/generated_14_mpnn_3.pdb
+INFO:root:Saved
+INFO:root:Predicting 56th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.01 seconds.
+INFO:root:Saving prediction to finalstructure/generated_14_mpnn_0.pdb
+INFO:root:Saved
+INFO:root:Predicting 57th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.04 seconds.
+INFO:root:Saving prediction to finalstructure/generated_13_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 58th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.07 seconds.
+INFO:root:Saving prediction to finalstructure/generated_12_mpnn_1.pdb
+INFO:root:Saved
+INFO:root:Predicting 59th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.08 seconds.
+INFO:root:Saving prediction to finalstructure/generated_13_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Predicting 60th chain in finalstructure/0_omegafold_input.fasta
+INFO:root:54 residues in this chain.
+INFO:root:Finished prediction in 8.09 seconds.
+INFO:root:Saving prediction to finalstructure/generated_12_mpnn_2.pdb
+INFO:root:Saved
+INFO:root:Done!

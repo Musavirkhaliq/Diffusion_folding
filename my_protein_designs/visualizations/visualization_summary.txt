@@ -1,0 +1,23 @@
+Backbone,OmegaFold Predictions,Status
+generated_13,0,No predictions found
+generated_1,0,No predictions found
+generated_9,0,No predictions found
+generated_10,0,No predictions found
+generated_12,0,No predictions found
+generated_2,0,No predictions found
+generated_4,0,No predictions found
+generated_8,0,No predictions found
+generated_5,0,No predictions found
+generated_3,0,No predictions found
+generated_6,0,No predictions found
+generated_11,0,No predictions found
+generated_14,0,No predictions found
+generated_7,0,No predictions found
+generated_0,0,No predictions found
+
+
+Summary Statistics:
+Total backbones: 15
+Backbones with predictions: 0
+Successful visualizations: 0
+Failed visualizations: 0
